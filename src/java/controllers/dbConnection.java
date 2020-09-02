@@ -10,7 +10,7 @@ public class dbConnection {
         Connection connection = null;
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/insurance?useTimezone=true&serverTimezone=UTC","root","");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/drray?useTimezone=true&serverTimezone=UTC","root","");
         } 
         
         catch (Exception e) {
