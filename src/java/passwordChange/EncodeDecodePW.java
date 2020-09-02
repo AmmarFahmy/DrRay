@@ -67,19 +67,5 @@ public class EncodeDecodePW {
         return decryptedText;
     }
 
-
-//    public static void main(String args []) throws Exception
-//    {
-//        EncodeDecodePW td= new EncodeDecodePW();
-//
-//        String target="Isuru";
-//        String encrypted=td.encrypt(target);
-//        String decrypted=td.decrypt(encrypted);
-//
-//        System.out.println("String To Encrypt: "+ target);
-//        System.out.println("Encrypted String:" + encrypted);
-//        System.out.println("Decrypted String:" + decrypted);
-//
-//    }
     
 }
