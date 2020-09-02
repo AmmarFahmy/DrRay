@@ -1,7 +1,5 @@
-<%-- 
-    Document   : index
-    Created on : Mar 29, 2019, 4:33:37 PM
-    Author     : ISK
+<%--
+    Author     : ammar
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -39,9 +37,10 @@
 
         <script src="js/mainScript.js"></script>
         <script src="js/Script.js"></script>
+        
+        <link rel="icon" href="images/logo.png">
 
-
-        <title>XYZ DRIVER'S ASSOCIATION</title>
+        <title>DrRay</title>
     </head>
 
     <body>
@@ -60,7 +59,7 @@
 
                             <li style="margin-left: 1em;">
                                 <i class="fa fa-phone"></i>
-                                <span>011-1234567</span>
+                                <span>076-6062424</span>
                             </li>
                         </ul>
                     </div>
@@ -95,7 +94,8 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top" id="mainNav">
             <div class="container">
                 <a class="navbar-brand js-scroll-trigger" href="index.jsp">
-                    <i class="fa fa-car"></i><span>DrRay</span>
+                    <img src="images/logo.png" width="50" height="50">
+                    <span>DrRay</span>
                 </a>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" 
@@ -212,12 +212,12 @@
                                 <div class="carousel-item active skyblue skyblue1">
                                     <div class="carousel-caption d-md-block">
                                         <h3 data-animation="animated bounceInLeft">
-                                            WE ARE THE BEST INSURANCE PROVIDER IN THE COUNTRY
+                                            PERSONAL CARE, PROFESSIONAL APPROACH
                                             
                                         </h3>
 
                                         <h3 data-animation="animated bounceInRight">
-                                            SUPPORT EACH OTHERS WITH FRIENDLY HANDS
+                                            REMARKABLE PEOPLE, REMARKABLE MEDICINE
                                         </h3>
 
                                         
@@ -228,11 +228,10 @@
                                 <div class="carousel-item skyblue skyblue2">
                                     <div class="carousel-caption d-md-block">
                                         <h3 class="icon-container" data-animation="animated bounceInDown">
-                                            <span class="fa fa-car"></span>
+                                            <span><img src="images/logo.png" width="80" height="80"></span>
                                         </h3>
                                         <h3 data-animation="animated bounceInUp">
-                                            NOW YOU CAN REGISTER FREE AND ADD VEHICLES TO OUR INSURANCE 
-                                            <BR>LIMITED TIME ONLY!!
+                                            FAST, FRIENDLY AND ACCURATE CARE FOR YOU !! 
                                         </h3>
                                         <button class="btn btn-primary btn-lg" 
                                                 onclick="window.location.href='registration.jsp'" data-animation="animated zoomInRight">Register</button>
@@ -243,7 +242,7 @@
                                 <div class="carousel-item skyblue skyblue3">
                                     <div class="carousel-caption d-md-block">
                                         <h3 class="icon-container" data-animation="animated zoomInLeft">
-                                            <span class="fa fa-car"></span>
+                                            <span><span><img src="images/logo.png" width="80" height="80"></span></span>
                                         </h3>
                                         <h3 data-animation="animated flipInX">
                                             FEEL FREE TO CONTACT US !!
@@ -272,11 +271,11 @@
                              data-aos-duration="2000" data-aos-easing="ease-in-sine">
                             <fieldset>
                                 <legend><i class="fa fa-money"></i></legend>
-                                <h2>Service 1</h2>
+                                <h2>Service 2</h2>
                                 <p>
-                                    Welcome to Allianz Sri Lanka Allianz Insurance Lanka 
-                                    Limited is a fully owned subsidiary of Allianz S.E. 
-                                    of Germany, the largest General Insurance Company in ...
+                                    DrRay Sri Lanka...
+                                    Completely Free and Provide Primary MRI, 
+                                    CT Scan and Brain Tumor Analysis for all..
                                 </p>
 
                             </fieldset>
@@ -288,9 +287,9 @@
                                 <legend><i class="fa fa-car"></i></legend>
                                 <h2>Service 1</h2>
                                 <p>
-                                    Welcome to Allianz Sri Lanka Allianz Insurance Lanka 
-                                    Limited is a fully owned subsidiary of Allianz S.E. 
-                                    of Germany, the largest General Insurance Company in ...
+                                    Welcome to DrRay Sri Lanka, Primary Health Care
+                                    Service. The Diagnosis, Treatment and Care of 
+                                    People With Health Problems...
                                 </p>
 
                             </fieldset>
@@ -300,11 +299,11 @@
                              data-aos-duration="2000" data-aos-easing="ease-in-sine">
                             <fieldset>
                                 <legend><i class="fa fa-wrench"></i></legend>
-                                <h2>Service 1</h2>
+                                <h2>Service 3</h2>
                                 <p>
-                                    Welcome to Allianz Sri Lanka Allianz Insurance Lanka 
-                                    Limited is a fully owned subsidiary of Allianz S.E. 
-                                    of Germany, the largest General Insurance Company in ...
+                                    DrRay Sri Lanka...
+                                    Completely Free and Provide Primary MRI, 
+                                    CT Scan and Brain Tumor Analysis for all..
                                 </p>
 
                             </fieldset>
@@ -322,9 +321,9 @@
                     <div class="row">
                         <div class="col-8">
                             <h3>Get Our Service</h3>
-                            <p>Welcome to Allianz Sri Lanka Allianz Insurance Lanka 
-                                Limited is a fully owned subsidiary of Allianz S.E. of Germany,
-                                the largest General Insurance Company in ...
+                            <p>Welcome to DrRay Sri Lanka, Primary Health Care
+                                Service. The Diagnosis, Treatment and Care of 
+                                People With Health Problems...
                             </p>
                         </div>
 
@@ -335,60 +334,7 @@
                 </div>
             </div>
 
-            <div class="prices">
-                <div class="container">
-
-                    <h1 data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="500">PRICES</h1>
-
-                    <div class="row" >
-
-                        <div class="col-sm m-4 p-4 priceceCol" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="500">
-                            <h5>Starter</h5>
-                            <p>
-                                <span class="sign">$</span><span class="value">3</span>/ per month<br>
-                                Up to 5 users<br>
-                                Basic support on Github<br>
-                                Monthly updates<br>
-                                Free cancelation
-                            </p>
-                        </div>
-
-                        <div class="col-sm m-4 p-4 priceceCol" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="500">
-                            <h5>Professional</h5>
-                            <p>
-                                <span class="sign">$</span><span class="value">6</span>/ per month<br>
-                                Up to 5 users<br>
-                                Basic support on Github<br>
-                                Monthly updates<br>
-                                Free cancelation
-                            </p>
-                        </div>
-
-                        <div class="col-sm m-4 p-4 priceceCol" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="500">
-                            <h5>Business</h5>
-                            <p>
-                                <span class="sign">$</span><span class="value">9</span>/ per month<br>
-                                Up to 5 users<br>
-                                Basic support on Github<br>
-                                Monthly updates<br>
-                                Free cancelation
-                            </p>
-                        </div>
-
-                        <div class="col-sm m-4 p-4 priceceCol" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="500">
-                            <h5>Enterprise</h5>
-                            <p>
-                                <span class="sign">$</span><span class="value">12</span>/ per month
-                                Up to 5 users
-                                Basic support on Github
-                                Monthly updates
-                                Free cancelation
-                            </p>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
+            
 
             <div class="contact_us" id="contact_us">
                 <div class="container">
@@ -399,13 +345,13 @@
 
                         <div class="col-sm"  data-aos="fade-up" data-aos-duration="2000" data-aos-delay="500">
                             <h5><i class="fa fa-map-marker"></i>&nbsp;&nbsp;ADDRESS</h5>
-                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;141, Mattakkuliya Church Rd, Colombo</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;141, Church Rd, Mattakkuliya, Colombo</p>
 
                             <h5><i class="fa fa-phone"></i>&nbsp;&nbsp;PHONE NUMBER</h5>
-                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;011-1234567</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;076-6062424</p>
 
                             <h5><i class="fa fa-envelope"></i>&nbsp;&nbsp;EMAIL</h5>
-                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kelljared9@gmail.com</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ammarkhan375@gmail.com</p>
                         </div>
 
                         <div class="col-sm"  data-aos="fade-up" data-aos-duration="2000" data-aos-delay="500">
@@ -446,8 +392,8 @@
             </div>
 
             <footer class="page-footer font-small  footer">
-                <div class="footer-copyright text-center py-3">© 2018 Copyright:
-                    <a href="index.jsp"> XYZ DRIVER'S ASSOCIATION</a>
+                <div class="footer-copyright text-center py-3">© 2020 Copyrights:
+                    <a href="index.jsp"> DrRay Sri Lanka</a>
                 </div>
             </footer>
 
