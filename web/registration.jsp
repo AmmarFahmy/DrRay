@@ -36,6 +36,8 @@
         
         <link rel="stylesheet" type="text/css" href="css/Style.css">
         
+        <link rel="icon" href="images/logo.png">
+        
         <script src="js/Script.js"></script>
         <script src="js/validation.js"></script>
         
