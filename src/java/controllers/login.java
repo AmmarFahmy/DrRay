@@ -8,6 +8,7 @@ package controllers;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -74,21 +75,23 @@ public class login extends HttpServlet {
                         else if (user_Status == 10) {
                             session.setMaxInactiveInterval(10 * 60);
                             session.setAttribute("userStatus", "MainAdmin");
-                        } else {
+                        } 
+                        else {
                             session.setAttribute("userStatus", "User");
                         }
-                    } else {
+                    } 
+                    else {
                         response.sendRedirect("login.jsp?confirm=fail");
                     }
-                } else {
+                } 
+                else {
                     response.sendRedirect("login.jsp?password=incorrect");
                 }
 
             } else {
                 response.sendRedirect("login.jsp?login=fail");
             }
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (IOException | SQLException e) {
         }
     }
 
