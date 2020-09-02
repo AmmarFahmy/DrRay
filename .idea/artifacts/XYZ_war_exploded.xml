@@ -1,0 +1,21 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="XYZ:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/XYZ_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="XYZ" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="lib" />
+          <element id="file-copy" path="$PROJECT_DIR$/../javax.mail-api-1.4.4.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../mysql-connector-java-8.0.11.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../commons-codec-1.7.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../../../3rd Year/6th Semester/Enterprise Systems Development/Assignment 01 - Group/IntelliJ/unirest-java-1.4.7.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../../../3rd Year/6th Semester/Enterprise Systems Development/Assignment 01 - Group/NetBeans/javamail-imap-1.4.2.jar" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="XYZ/web/Web" />
+    </root>
+  </artifact>
+</component>
