@@ -19,7 +19,7 @@ import passwordHashing.BCrypt;
 
 /**
  *
- * @author ISK
+ * @author ammar
  */
 @WebServlet(name = "login", urlPatterns = {"/login"})
 public class login extends HttpServlet {
@@ -71,10 +71,7 @@ public class login extends HttpServlet {
                             session.setMaxInactiveInterval(10 * 60);
                             session.setAttribute("userStatus", "ClaimAdmin");
                         }
-                        else if (user_Status == 9) {
-                            session.setMaxInactiveInterval(10 * 60);
-                            session.setAttribute("userStatus", "Admin");
-                        } else if (user_Status == 10) {
+                        else if (user_Status == 10) {
                             session.setMaxInactiveInterval(10 * 60);
                             session.setAttribute("userStatus", "MainAdmin");
                         } else {
