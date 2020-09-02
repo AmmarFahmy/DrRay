@@ -1,7 +1,5 @@
-<%-- 
-    Document   : login
-    Created on : Mar 4, 2019, 8:15:02 PM
-    Author     : ISK
+<%--
+    Author     : ammar
 --%>
 
 <%@page import="java.net.URL"%>
@@ -35,6 +33,8 @@
         <link rel="stylesheet" type="text/css" href="css/Style.css">
         
         <script src="js/Script.js"></script>
+        
+        <link rel="icon" href="images/logo.png">
         
         <title>Insurance</title>
         
