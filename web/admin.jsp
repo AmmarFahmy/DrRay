@@ -51,7 +51,7 @@
         %>
         
         <div class="hedding" data-aos="fade-up" data-aos-duration="2500">
-            <h1>XYZ DRIVER'S ASSOCIATION</h1> <br>
+            <h1>DrRay </h1> <br>
             <h1>Admin Panel</h1> </div>
 
         <div class="button" align="center">
