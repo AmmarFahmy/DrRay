@@ -55,6 +55,8 @@
                         <th>Last Name</th> 
                         <th>Phone Number</th>
                         <th>User Email</th>
+                        <th>NIC Number</th>
+                        <th>SLMC Registration Number</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -68,7 +70,11 @@
                         String u_firstName = rs.getString("u_firstName");
                         String u_lastName = rs.getString("u_lastName");
                         String u_Phone = rs.getString("u_Phone");
-                        String u_Email = rs.getString("u_Email");%>
+                        String u_Email = rs.getString("u_Email");
+                        String u_NICNum = rs.getString("u_NICNum");
+                        String u_SLMCNum = rs.getString("u_SLMCNum");
+                
+                %>
                 <tr>
                     <td><%= userID%></td>
                     <td><%=user_Name%></td>
@@ -76,6 +82,8 @@
                     <td><%=u_lastName%> </td> 
                     <td><%=u_Phone%> </td>
                     <td><%=u_Email%> </td>
+                    <td><%=u_NICNum%> </td>
+                    <td><%=u_SLMCNum%> </td>
                     <td>
 
                         <form action="allmembercontroler" method="POST">
