@@ -82,19 +82,19 @@ public class register extends HttpServlet {
                 
                 
                 /*Send email verification email*/
-                String subject = "Insurance E-mail verification!!";
+                //String subject = "Insurance E-mail verification!!";
                 
-                EncodeDecodePW pw= new EncodeDecodePW();
-                String token = pw.encrypt(tmpPw);
+                //EncodeDecodePW pw= new EncodeDecodePW();
+                //String token = pw.encrypt(tmpPw);
                         
-                String link = "http://localhost:8080/XYZ/thorughEmail/newPw.jsp?un="+ userName +"&token="+token;
+                //String link = "http://localhost:8080/XYZ/thorughEmail/newPw.jsp?un="+ userName +"&token="+token;
                 
-                String message = "<h1><i>Hello "+userFname+ " " + userLname +" !!!</i></h1>";
-                message += "<h3><b>click here to verify your email</b></h3>";
-                message += "<a style='color:white;font-weight:bold;background-color:#e0c21a;font-size:2em;padding:0.2em 3em 0.2em 3em;text-align:center;cursor: pointer;border-radius:10px;text-decoration: none;' href='"+ link +"'>Verify</a>";
+                //String message = "<h1><i>Hello "+userFname+ " " + userLname +" !!!</i></h1>";
+               // message += "<h3><b>click here to verify your email</b></h3>";
+               // message += "<a style='color:white;font-weight:bold;background-color:#e0c21a;font-size:2em;padding:0.2em 3em 0.2em 3em;text-align:center;cursor: pointer;border-radius:10px;text-decoration: none;' href='"+ link +"'>Verify</a>";
                 
 
-                models.sendEmail.sendEmail(host, port, user, pass, userEmail, subject, message);
+               // models.sendEmail.sendEmail(host, port, user, pass, userEmail, subject, message);
                 con.close();
                 response.sendRedirect("login.jsp?registration=success");
                 
