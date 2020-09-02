@@ -36,6 +36,18 @@
                     minlength: 5,
                     maxlength: 15
                 },
+                
+                uNICNum: {
+                    required: true,
+                    minlength: 9,
+                    maxlength: 9
+                },
+                
+                uSLMC: {
+                    required: true,
+                    minlength: 5,
+                    maxlength: 5
+                }
             }
     });
 
