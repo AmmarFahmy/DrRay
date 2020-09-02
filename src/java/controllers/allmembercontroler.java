@@ -55,13 +55,13 @@ public class allmembercontroler extends HttpServlet {
                     response.sendRedirect("changedetails.jsp?userID=" +usID);
                 break;
                 case  "Deactivate":
-        
-                int i=usermodel.deleteuser(aID);
-                if(i!=0){
-                response.sendRedirect("allmembers.jsp?Deactivate=success");
-                }else{
-                response.sendRedirect("allmembers.jsp?Deactivate=fail");    
-                }
+                    int i=usermodel.deleteuser(aID);
+                    if(i!=0){
+                    response.sendRedirect("allmembers.jsp?Deactivate=success");
+                    }
+                    else{
+                    response.sendRedirect("allmembers.jsp?Deactivate=fail");    
+                    }
                 
                 break;
                 
