@@ -97,6 +97,8 @@
                                         <span ng-show="RegForm.uLname.$error.minlength">Last Name is too short!</span>
                                         <span ng-show="RegForm.uLname.$error.maxlength">Last Name is too long!</span>
                                     </div>
+                                    
+                                    
 
                                     <div class="input-group no-border input-lg" 
                                          data-aos="zoom-in" data-aos-duration="2500">
@@ -118,6 +120,50 @@
                                         <span ng-show="RegForm.userEmail.$error.pattern">Please enter a valid Email!</span>
                                     </div>
                                     
+                                    
+                                    
+                                    <div class="input-group no-border input-lg" 
+                                         data-aos="zoom-in" data-aos-duration="2500">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">
+                                                <i class=" fa fa-user-circle"></i>
+                                            </span>
+                                        </div>
+                                        <input type="text" name="uNICNum" class="form-control" placeholder="NIC number..." 
+                                               ng-model="uNICNum"
+                                               onkeypress="allowNumbersOnly(event)" maxlength="9"
+                                               ng-minlength="{{user.uNICNum.minlength}}" 
+                                               ng-required="{{user.uNICNum.required}}" />
+                                    </div>
+                                    
+                                    <div class="error_message">
+                                        <span ng-show="RegForm.uNICNum.$dirty && RegForm.uNICNum.$error.required">NIC number is required!</span>
+                                        <span ng-show="RegForm.uNICNum.$error.minlength">NIC number should contain 9 numbers!</span>
+                                    </div>  
+                                    
+                                    
+                                    
+                                    <div class="input-group no-border input-lg" 
+                                         data-aos="zoom-in" data-aos-duration="2500">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">
+                                                <i class=" fa fa-user-circle"></i>
+                                            </span>
+                                        </div>
+                                        <input type="text" name="uSLMC" class="form-control" placeholder="SLMC Registration number..." 
+                                               ng-model="uSLMC"
+                                               onkeypress="allowNumbersOnly(event)" maxlength="5"
+                                               ng-minlength="{{user.uSLMC.minlength}}" 
+                                               ng-required="{{user.uSLMC.required}}" />
+                                    </div>
+                                    
+                                    <div class="error_message">
+                                        <span ng-show="RegForm.uSLMC.$dirty && RegForm.uSLMC.$error.required">SLMC Registration number is required!</span>
+                                        <span ng-show="RegForm.uSLMC.$error.minlength">The registration number should contain 5 digits !</span>
+                                    </div>
+                                    
+                                    
+                                    
                                     <div class="input-group no-border input-lg" 
                                          data-aos="zoom-in" data-aos-duration="2500">
                                         <div class="input-group-prepend">
@@ -136,6 +182,8 @@
                                         <span ng-show="RegForm.uPhoneNum.$dirty && RegForm.uPhoneNum.$error.required">Phone number is required!</span>
                                         <span ng-show="RegForm.uPhoneNum.$error.minlength">Phone number should contain 10 numbers!</span>
                                     </div>  
+                                    
+                                    
                                     
                                     <div class="input-group no-border input-lg" 
                                          data-aos="zoom-in" data-aos-duration="2500">
