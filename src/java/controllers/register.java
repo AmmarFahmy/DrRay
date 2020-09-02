@@ -53,6 +53,8 @@ public class register extends HttpServlet {
             String userFname=request.getParameter("uFname");
             String userLname = request.getParameter("uLname");
             String userEmail=request.getParameter("userEmail");
+            String userNIC=request.getParameter("uNICNum");
+            String userSLMC=request.getParameter("uSLMC");
             String userPnumber = request.getParameter("uPhoneNum");
             String userName = request.getParameter("userName");
             
@@ -64,8 +66,8 @@ public class register extends HttpServlet {
             ResultSet rs = ps.executeQuery();
             
             if (!rs.next()) {
-                String RegisterSQL = "INSERT INTO users (user_name,u_firstName,u_lastName,u_Phone,u_Email,u_PW,u_status)" + 
-                    "VALUES (?,?,?,?,?,?,?)";
+                String RegisterSQL = "INSERT INTO users (user_name,u_firstName,u_lastName,u_Phone,u_Email,u_NICNum,u_SLMCNum,u_PW,u_status)" + 
+                    "VALUES (?,?,?,?,?,?,?,?,?)";
   
                
                 PreparedStatement preparedStmt = con.prepareStatement(RegisterSQL);
@@ -75,8 +77,10 @@ public class register extends HttpServlet {
                 preparedStmt.setString (3, userLname);
                 preparedStmt.setString (4, userPnumber);
                 preparedStmt.setString (5, userEmail);
-                preparedStmt.setString (6, tmpPw);
-                preparedStmt.setInt (7, 0);
+                preparedStmt.setString (6, userNIC);
+                preparedStmt.setString (7, userSLMC);
+                preparedStmt.setString (8, tmpPw);
+                preparedStmt.setInt (9, 0);
                 
                 preparedStmt.execute();
                 
