@@ -6,7 +6,6 @@
 package controllers;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -18,10 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import models.usermodel;
 
-/**
- *
- * @author ASUS
- */
+
 @WebServlet(name = "allmembercontroler", urlPatterns = {"/allmembercontroler"})
 public class allmembercontroler extends HttpServlet {
 
