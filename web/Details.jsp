@@ -1,8 +1,4 @@
-<%-- 
-    Document   : Details
-    Created on : Mar 27, 2019, 3:11:46 PM
-    Author     : Pasindu
---%>
+
 <!--importing libraries -->
 <%@page import="java.util.List"%>
 <%@page import="java.util.ArrayList"%>
@@ -27,11 +23,6 @@
 
     String first = (String) se.getAttribute("fName");
     String ID = "" + se.getAttribute("userID");
-//    out.print("<font color=red size=6>");
-//    out.print(ID);
-//    out.print("</br>");
-//    out.print(first);
-//    out.print("</font>");
 
 %>
 
@@ -60,13 +51,16 @@
         <link rel="stylesheet" type="text/css" href="css/now-ui-kit.css">
         <link rel="stylesheet" type="text/css" href="css/Style.css">
 
+        <link rel="icon" href="images/logo.png">
+        <title>DrRay</title>
+
         <script src="js/Script.js"></script>
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top" id="mainNav">
             <div class="container">
                 <a class="navbar-brand js-scroll-trigger" href="index.jsp">
-                    <i class="fa fa-car"></i><span>XYZ DRIVER'S ASSOCIATION</span>
+                    <i class="fa fa-car"></i><span>DrRay Sri Lanka</span>
                 </a>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" 
@@ -124,13 +118,13 @@
             </div>
         </nav>
         <!--table-->
-        
+
         <br>
         <br>
         <br>
         <br
-        >
-        
+            >
+
         <table id="table" border="1"  id="table" class="table table-primary  table-striped text-light table-hover" >
             <tr>
 
@@ -167,14 +161,14 @@
                 <!--half paid-->
 
                 <td><form method="post" action="payment.jsp"><input type="hidden" name="vehicle_id" value="<%out.print(reg.getVehicleId());%>"/><input type="hidden" name="total" value="<%out.print(reg.getTotal());%>"/><button type="submit" >Pay</button></form></td>
-                        <%} else if(reg.getTotal()!=0.) {%>
+                        <%} else if (reg.getTotal() != 0.) {%>
                 <td><button  disabled>Pay</button></td>
                 <%} else {%>
                 <!--full paid-->  
                 <td><button  disabled>Paid</button></td>
                 <%}%>
-<!--meka check krnna ai mn iye ohma kla wada kle na ne-->
-<!--ok. thawa thiyenawada? dn balanna hri ne podk db 1 total eka blnna eke toatal eka natiwelane -->
+                <!--meka check krnna ai mn iye ohma kla wada kle na ne-->
+                <!--ok. thawa thiyenawada? dn balanna hri ne podk db 1 total eka blnna eke toatal eka natiwelane -->
             </tr>
             <%
                 }
