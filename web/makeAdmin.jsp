@@ -1,8 +1,4 @@
-<%-- 
-    Document   : admin page
-    Created on : Mar 4, 2019, 8:15:02 PM
-    Author     : Randika
---%>
+
 
 <%@page import="java.sql.ResultSet"%>
 <%@page import="models.usermodel" %>
@@ -38,13 +34,14 @@
 
         <script src="js/Script.js"></script>
 
-        <title>Admin</title>
+        <link rel="icon" href="images/logo.png">
+        <title>DrRay</title>
 
     </head>
     <body>
         <div class="hedding" data-aos="fade-up" data-aos-duration="2500">
-            <h1>XYZ DRIVER'S ASSOCIATION</h1> <br>
-            <h1>All Members Panel</h1> </div>
+            <h1>DrRay Sri Lanka</h1> <br>
+            <h1>All Users Panel</h1> </div>
         <div class="allmembers-form">
             <table class="table table-dark" style="margin-top: 3em;"  data-aos="fade-up" data-aos-duration="2500">
                 <thead>
@@ -60,7 +57,7 @@
                 </thead>
                 <% models.usermodel a = new models.usermodel();
                     HttpSession ses = request.getSession(true);
-                    ResultSet rs = a.allmemberdisplay();
+                    ResultSet rs = a.allmemberdisplays();
                     String status;
                     while (rs.next()) {
 
