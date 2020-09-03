@@ -34,6 +34,22 @@ public class usermodel {
         return rs;
 
     }
+    
+    public ResultSet allmemberdisplays() throws ServletException, IOException, SQLException {
+
+        Statement stmt;
+        ResultSet rs;
+
+        Connection con = getConnection();
+        String queryString = "select * from users";
+        stmt = con.prepareStatement(queryString);
+        // query result is in rs object
+        rs = stmt.executeQuery(queryString);
+
+        //return "ID = "+userID+ " First Name = "+user_name+" Last Name = "+u_fristName;
+        return rs;
+
+    }
 
     public static ResultSet displaychanged(String userid) throws ServletException, IOException, SQLException {
 
