@@ -13,10 +13,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- *
- * @author ASUS
- */
 @WebServlet(name = "adminservlet", urlPatterns = {"/adminservlet"})
 
 public class admin extends HttpServlet {
@@ -33,20 +29,29 @@ public class admin extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        String action=request.getParameter("action");
+        String action = request.getParameter("action");
         System.out.println(action);
-        switch(action){
+        switch (action) {
             case "All Users":
                 response.sendRedirect("allusers.jsp");
                 break;
             case "User Profile Requests":
                 response.sendRedirect("userrequest.jsp");
-                break; 
+                break;
             case "Make Admin":
                 response.sendRedirect("makeAdmin.jsp");
-                break;    
+                break;
+            case "Upload MRI or CT Scan Image":
+                response.sendRedirect("uploadMRI.jsp");
+                break;
+            case "Upload Scanned Image to Detect Tumor":
+                response.sendRedirect("#");
+                break;
+            case "Home":
+                response.sendRedirect("index.jsp");
+                break;
         }
-        
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
