@@ -37,7 +37,7 @@
 
         <script src="js/mainScript.js"></script>
         <script src="js/Script.js"></script>
-        
+
         <link rel="icon" href="images/logo.png">
 
         <title>DrRay</title>
@@ -106,7 +106,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+                            <a class="nav-link js-scroll-trigger" href="searchImage.jsp">Search Analyzed Image</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link js-scroll-trigger" 
@@ -132,35 +132,34 @@
                                     <%
                                         String US = (String) se.getAttribute("US");
                                         int userS = Integer.parseInt(US);
-                                        
-                                        if(userS>1){
-                                    %>
-                                    
-                                    <li>
-                                   
-                                 
-                                    <%
-                                        String uStaus = (String) se.getAttribute("userStatus");
 
-                                        if (uStaus == "Admin" || uStaus == "ClaimAdmin") {
+                                        if (userS > 1) {
                                     %>
+
+                                    <li>
+
+
+                                        <%
+                                            String uStaus = (String) se.getAttribute("userStatus");
+
+                                            if (uStaus == "Admin" || uStaus == "ClaimAdmin") {
+                                        %>
                                         <a href="mainPage.jsp"><li>&nbsp;&nbsp;&nbsp;Claim Dashboard</li></a>
-                                    <%
-                                        }
-                                        else if (uStaus == "Admin" || uStaus == "MainAdmin") {
-                                    %>
+                                                <%
+                                                } else if (uStaus == "Admin" || uStaus == "MainAdmin") {
+                                                %>
                                         <a href="admin.jsp"><li>&nbsp;&nbsp;&nbsp;Admin Dashboard</li></a>
-                                    <%
-                                        }else{
-                                    %>
+                                                <%
+                                                } else {
+                                                %>
                                         <a href="memberDashBoard.jsp"><li>&nbsp;&nbsp;&nbsp;Dashboard</li></a>
-                                    <%
-                                        }
-                                    %>
+                                                <%
+                                                    }
+                                                %>
                                     </li>
                                     <hr>
                                     <% } %>
-                                    
+
                                     <a href="logout"><li>&nbsp;&nbsp;&nbsp;Logout</li></a>
 
                                 </ul>
@@ -195,228 +194,228 @@
 
             <div class="container>" 
                  <div class="row">
-                    <div class="col">
+                <div class="col">
 
-                        <!-- carousel code -->
-                        <div id="carouselExampleIndicators" class="carousel slide">
+                    <!-- carousel code -->
+                    <div id="carouselExampleIndicators" class="carousel slide">
 
-                            <ol class="carousel-indicators">
-                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                            </ol>
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
 
-                            <div class="carousel-inner skyblue">
+                        <div class="carousel-inner skyblue">
 
-                                <!-- first slide -->
-                                <div class="carousel-item active skyblue skyblue1">
-                                    <div class="carousel-caption d-md-block">
-                                        <h3 data-animation="animated bounceInLeft">
-                                            PERSONAL CARE, PROFESSIONAL APPROACH
-                                            
-                                        </h3>
+                            <!-- first slide -->
+                            <div class="carousel-item active skyblue skyblue1">
+                                <div class="carousel-caption d-md-block">
+                                    <h3 data-animation="animated bounceInLeft">
+                                        PERSONAL CARE, PROFESSIONAL APPROACH
 
-                                        <h3 data-animation="animated bounceInRight">
-                                            REMARKABLE PEOPLE, REMARKABLE MEDICINE
-                                        </h3>
+                                    </h3>
 
-                                        
-                                    </div>
+                                    <h3 data-animation="animated bounceInRight">
+                                        REMARKABLE PEOPLE, REMARKABLE MEDICINE
+                                    </h3>
+
+
                                 </div>
+                            </div>
 
-                                <!-- second slide -->
-                                <div class="carousel-item skyblue skyblue2">
-                                    <div class="carousel-caption d-md-block">
-                                        <h3 class="icon-container" data-animation="animated bounceInDown">
-                                            <span><img src="images/logo.png" width="80" height="80"></span>
-                                        </h3>
-                                        <h3 data-animation="animated bounceInUp">
-                                            FAST, FRIENDLY AND ACCURATE CARE FOR YOU !! 
-                                        </h3>
-                                        <button class="btn btn-primary btn-lg" 
-                                                onclick="window.location.href='registration.jsp'" data-animation="animated zoomInRight">Register</button>
-                                    </div>
+                            <!-- second slide -->
+                            <div class="carousel-item skyblue skyblue2">
+                                <div class="carousel-caption d-md-block">
+                                    <h3 class="icon-container" data-animation="animated bounceInDown">
+                                        <span><img src="images/logo.png" width="80" height="80"></span>
+                                    </h3>
+                                    <h3 data-animation="animated bounceInUp">
+                                        FAST, FRIENDLY AND ACCURATE CARE FOR YOU !! 
+                                    </h3>
+                                    <button class="btn btn-primary btn-lg" 
+                                            onclick="window.location.href = 'registration.jsp'" data-animation="animated zoomInRight">Register</button>
                                 </div>
+                            </div>
 
-                                <!-- third slide -->
-                                <div class="carousel-item skyblue skyblue3">
-                                    <div class="carousel-caption d-md-block">
-                                        <h3 class="icon-container" data-animation="animated zoomInLeft">
-                                            <span><span><img src="images/logo.png" width="80" height="80"></span></span>
-                                        </h3>
-                                        <h3 data-animation="animated flipInX">
-                                            FEEL FREE TO CONTACT US !!
-                                        </h3>
-                                        <button class="btn btn-primary btn-lg" data-animation="animated lightSpeedIn"
-                                                onclick="smoothScroll(document.getElementById('contact_us'))">Contact us</button>
-                                    </div>
+                            <!-- third slide -->
+                            <div class="carousel-item skyblue skyblue3">
+                                <div class="carousel-caption d-md-block">
+                                    <h3 class="icon-container" data-animation="animated zoomInLeft">
+                                        <span><span><img src="images/logo.png" width="80" height="80"></span></span>
+                                    </h3>
+                                    <h3 data-animation="animated flipInX">
+                                        FEEL FREE TO CONTACT US !!
+                                    </h3>
+                                    <button class="btn btn-primary btn-lg" data-animation="animated lightSpeedIn"
+                                            onclick="smoothScroll(document.getElementById('contact_us'))">Contact us</button>
                                 </div>
-
                             </div>
 
                         </div>
 
                     </div>
+
                 </div>
             </div>
+        </div>
 
-            <div class="Services" id="services">
-                <div class="container">
+        <div class="Services" id="services">
+            <div class="container">
 
-                    <h1 data-aos="zoom-in" data-aos-duration="2000">OUR SERVICES</h1>
+                <h1 data-aos="zoom-in" data-aos-duration="2000">OUR SERVICES</h1>
 
-                    <div class="row">
+                <div class="row">
 
-                        <div class="col-sm m-4 p-4 serviceCol" data-aos="zoom-in" data-aos-offset="300" 
-                             data-aos-duration="2000" data-aos-easing="ease-in-sine">
-                            <fieldset>
-                                <legend><i class="fa fa-money"></i></legend>
-                                <h2>Service 2</h2>
-                                <p>
-                                    DrRay Sri Lanka...
-                                    Completely Free and Provide Primary MRI, 
-                                    CT Scan and Brain Tumor Analysis for all..
-                                </p>
+                    <div class="col-sm m-4 p-4 serviceCol" data-aos="zoom-in" data-aos-offset="300" 
+                         data-aos-duration="2000" data-aos-easing="ease-in-sine">
+                        <fieldset>
+                            <legend><i class="fa fa-money"></i></legend>
+                            <h2>Service 2</h2>
+                            <p>
+                                DrRay Sri Lanka...
+                                Completely Free and Provide Primary MRI, 
+                                CT Scan and Brain Tumor Analysis for all..
+                            </p>
 
-                            </fieldset>
-                        </div>
-
-                        <div class="col-sm m-4 p-4 serviceCol" data-aos="flip-left" data-aos-duration="2500">
-
-                            <fieldset>
-                                <legend><i class="fa fa-car"></i></legend>
-                                <h2>Service 1</h2>
-                                <p>
-                                    Welcome to DrRay Sri Lanka, Primary Health Care
-                                    Service. The Diagnosis, Treatment and Care of 
-                                    People With Health Problems...
-                                </p>
-
-                            </fieldset>
-                        </div>
-
-                        <div class="col-sm m-4 p-4 serviceCol" data-aos="zoom-" data-aos-offset="300" 
-                             data-aos-duration="2000" data-aos-easing="ease-in-sine">
-                            <fieldset>
-                                <legend><i class="fa fa-wrench"></i></legend>
-                                <h2>Service 3</h2>
-                                <p>
-                                    DrRay Sri Lanka...
-                                    Completely Free and Provide Primary MRI, 
-                                    CT Scan and Brain Tumor Analysis for all..
-                                </p>
-
-                            </fieldset>
-                        </div>
-
+                        </fieldset>
                     </div>
 
-                </div>
-            </div>
+                    <div class="col-sm m-4 p-4 serviceCol" data-aos="flip-left" data-aos-duration="2500">
 
-
-            <div class="get_our_services" data-aos="fade-up" data-aos-duration="2500">
-
-                <div class="container">
-                    <div class="row">
-                        <div class="col-8">
-                            <h3>Get Our Service</h3>
-                            <p>Welcome to DrRay Sri Lanka, Primary Health Care
+                        <fieldset>
+                            <legend><i class="fa fa-car"></i></legend>
+                            <h2>Service 1</h2>
+                            <p>
+                                Welcome to DrRay Sri Lanka, Primary Health Care
                                 Service. The Diagnosis, Treatment and Care of 
                                 People With Health Problems...
                             </p>
-                        </div>
 
-                        <div class="col-4 ">
-                            <button onclick="smoothScroll(document.getElementById('contact_us'))">Contact Us</button>
-                        </div>
+                        </fieldset>
                     </div>
-                </div>
-            </div>
 
-            
+                    <div class="col-sm m-4 p-4 serviceCol" data-aos="zoom-" data-aos-offset="300" 
+                         data-aos-duration="2000" data-aos-easing="ease-in-sine">
+                        <fieldset>
+                            <legend><i class="fa fa-wrench"></i></legend>
+                            <h2>Service 3</h2>
+                            <p>
+                                DrRay Sri Lanka...
+                                Completely Free and Provide Primary MRI, 
+                                CT Scan and Brain Tumor Analysis for all..
+                            </p>
 
-            <div class="contact_us" id="contact_us">
-                <div class="container">
-
-                    <h1 data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="500">Contact Us</h1>
-
-                    <div class="row">
-
-                        <div class="col-sm"  data-aos="fade-up" data-aos-duration="2000" data-aos-delay="500">
-                            <h5><i class="fa fa-map-marker"></i>&nbsp;&nbsp;ADDRESS</h5>
-                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;141, Church Rd, Mattakkuliya, Colombo</p>
-
-                            <h5><i class="fa fa-phone"></i>&nbsp;&nbsp;PHONE NUMBER</h5>
-                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;076-6062424</p>
-
-                            <h5><i class="fa fa-envelope"></i>&nbsp;&nbsp;EMAIL</h5>
-                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ammarkhan375@gmail.com</p>
-                        </div>
-
-                        <div class="col-sm"  data-aos="fade-up" data-aos-duration="2000" data-aos-delay="500">
-                            <form class="contact_from">
-                                <input type="text" name="fullName" placeholder="Full Name">
-                                <br>
-                                <input type="email" name="email" placeholder="Email">
-                                <br>
-                                <textarea class="Umessage" placeholder="Message"></textarea>
-
-                                <br>
-                                <button type="submit" name="submit">Send</button>
-                            </form>
-                        </div>
-
+                        </fieldset>
                     </div>
 
                 </div>
 
             </div>
+        </div>
 
-            <div class='scrolltop'>
-                <div class='scroll icon'>
-                    <a href="#" class="scroll-btn pinkBg" target="_blank">
-                        <i class="glyphicon glyphicon-play whiteText fa fa-4x fa-angle-up" aria-hidden="true"></i>
-                        <span class="ripple pinkBg"></span>
-                        <span class="ripple pinkBg"></span>
-                        <span class="ripple pinkBg"></span>
-                    </a>
+
+        <div class="get_our_services" data-aos="fade-up" data-aos-duration="2500">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-8">
+                        <h3>Get Our Service</h3>
+                        <p>Welcome to DrRay Sri Lanka, Primary Health Care
+                            Service. The Diagnosis, Treatment and Care of 
+                            People With Health Problems...
+                        </p>
+                    </div>
+
+                    <div class="col-4 ">
+                        <button onclick="smoothScroll(document.getElementById('contact_us'))">Contact Us</button>
+                    </div>
                 </div>
             </div>
+        </div>
 
-            <div class="map_location"  data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300">
-                <div class="container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.3040496541953!2d79.87564541409559!3d6.9734097197056695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2587cd46bd389%3A0x19cdcb23a74dcc59!2sNorthshore+College+of+Business+and+Technology!5e0!3m2!1sen!2slk!4v1554007562910!5m2!1sen!2slk" 
-                            width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+
+        <div class="contact_us" id="contact_us">
+            <div class="container">
+
+                <h1 data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="500">Contact Us</h1>
+
+                <div class="row">
+
+                    <div class="col-sm"  data-aos="fade-up" data-aos-duration="2000" data-aos-delay="500">
+                        <h5><i class="fa fa-map-marker"></i>&nbsp;&nbsp;ADDRESS</h5>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;141, Church Rd, Mattakkuliya, Colombo</p>
+
+                        <h5><i class="fa fa-phone"></i>&nbsp;&nbsp;PHONE NUMBER</h5>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;076-6062424</p>
+
+                        <h5><i class="fa fa-envelope"></i>&nbsp;&nbsp;EMAIL</h5>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ammarkhan375@gmail.com</p>
+                    </div>
+
+                    <div class="col-sm"  data-aos="fade-up" data-aos-duration="2000" data-aos-delay="500">
+                        <form class="contact_from">
+                            <input type="text" name="fullName" placeholder="Full Name">
+                            <br>
+                            <input type="email" name="email" placeholder="Email">
+                            <br>
+                            <textarea class="Umessage" placeholder="Message"></textarea>
+
+                            <br>
+                            <button type="submit" name="submit">Send</button>
+                        </form>
+                    </div>
+
                 </div>
+
             </div>
 
-            <footer class="page-footer font-small  footer">
-                <div class="footer-copyright text-center py-3">© 2020 Copyrights:
-                    <a href="index.jsp"> DrRay Sri Lanka</a>
-                </div>
-            </footer>
+        </div>
 
-            <script src="js/mainSlider.js"></script>
-            <script>
-                                AOS.init();
+        <div class='scrolltop'>
+            <div class='scroll icon'>
+                <a href="#" class="scroll-btn pinkBg" target="_blank">
+                    <i class="glyphicon glyphicon-play whiteText fa fa-4x fa-angle-up" aria-hidden="true"></i>
+                    <span class="ripple pinkBg"></span>
+                    <span class="ripple pinkBg"></span>
+                    <span class="ripple pinkBg"></span>
+                </a>
+            </div>
+        </div>
+
+        <div class="map_location"  data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300">
+            <div class="container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.3040496541953!2d79.87564541409559!3d6.9734097197056695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2587cd46bd389%3A0x19cdcb23a74dcc59!2sNorthshore+College+of+Business+and+Technology!5e0!3m2!1sen!2slk!4v1554007562910!5m2!1sen!2slk" 
+                        width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <footer class="page-footer font-small  footer">
+            <div class="footer-copyright text-center py-3">© 2020 Copyrights:
+                <a href="index.jsp"> DrRay Sri Lanka</a>
+            </div>
+        </footer>
+
+        <script src="js/mainSlider.js"></script>
+        <script>
+                            AOS.init();
 
 <!-- Scroll to top Js -->
 
-                                $(window).scroll(function () {
-                                    if ($(this).scrollTop() > 50) {
-                                        $('.scrolltop:hidden').stop(true, true).fadeIn();
-                                    } else {
-                                        $('.scrolltop').stop(true, true).fadeOut();
-                                    }
-                                });
-                                $(function () {
-                                    $(".scroll").click(function () {
-                                        $("html,body").animate({scrollTop: $(".thetop").offset().top}, "1000");
-                                        return false
-                                    })
+                            $(window).scroll(function () {
+                                if ($(this).scrollTop() > 50) {
+                                    $('.scrolltop:hidden').stop(true, true).fadeIn();
+                                } else {
+                                    $('.scrolltop').stop(true, true).fadeOut();
+                                }
+                            });
+                            $(function () {
+                                $(".scroll").click(function () {
+                                    $("html,body").animate({scrollTop: $(".thetop").offset().top}, "1000");
+                                    return false
                                 })
+                            })
 
-            </script>
+        </script>
     </body>
 </html>
