@@ -1,8 +1,4 @@
-<%-- 
-    Document   : login
-    Created on : Mar 4, 2019, 8:15:02 PM
-    Author     : ISK
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -41,7 +37,7 @@
         <script src="js/Script.js"></script>
         <script src="js/validation.js"></script>
 
-        <title>Insurance</title>
+        <title>DrRay</title>
 
     </head>
     <body>
@@ -51,7 +47,7 @@
                 <div class="col-md-4 ml-auto mr-auto">
                     <div class="outer">
                         <div class="middle">
-                            <h3>Registration Form</h3>
+                            <h3 align="center">Registration Form</h3>
                             <form class="RegForm" name="RegForm" method="POST" action="register" ng-app="regForm" ng-controller="regFormC" >
                                 <div class="blur"></div>
                                 <div class="card-body">
