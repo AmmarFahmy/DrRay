@@ -18,10 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import passwordHashing.BCrypt;
 
-/**
- *
- * @author ammar
- */
+
 @WebServlet(name = "login", urlPatterns = {"/login"})
 public class login extends HttpServlet {
 
@@ -71,20 +68,16 @@ public class login extends HttpServlet {
                         if (user_Status == 8) {
                             session.setMaxInactiveInterval(10 * 60);
                             session.setAttribute("userStatus", "ClaimAdmin");
-                        }
-                        else if (user_Status == 10) {
+                        } else if (user_Status == 10) {
                             session.setMaxInactiveInterval(10 * 60);
                             session.setAttribute("userStatus", "MainAdmin");
-                        } 
-                        else {
+                        } else {
                             session.setAttribute("userStatus", "User");
                         }
-                    } 
-                    else {
+                    } else {
                         response.sendRedirect("login.jsp?confirm=fail");
                     }
-                } 
-                else {
+                } else {
                     response.sendRedirect("login.jsp?password=incorrect");
                 }
 
