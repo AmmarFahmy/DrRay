@@ -56,13 +56,9 @@
 
         <div class="button" align="center">
             <form action="adminservlet" method="post">
-                <input type="submit" class="btn btn-lg changebtn" data-aos="fade-up" data-aos-duration="2500"  value="All Members" name="action">
-                <br>
-                <input type="submit" class="btn btn-lg changebtn" data-aos="fade-up" data-aos-duration="2500"  value="Outstanding Balances" name="action">
+                <input type="submit" class="btn btn-lg changebtn" data-aos="fade-up" data-aos-duration="2500"  value="All Users" name="action">
                 <br>
                 <input type="submit" class="btn btn-lg changebtn" data-aos="fade-up" data-aos-duration="2500"  value="User Profile Requests" name="action">
-                <br>
-                <input type="submit" class="btn btn-lg changebtn" data-aos="fade-up" data-aos-duration="2500"  value="Vehical Registration Request" name="action">
                 <br>
                 
                 <% 
@@ -72,7 +68,7 @@
                     if(uStaus == "MainAdmin"){ 
                 %>
                 
-                <input type="submit" class="btn btn-lg changebtn" data-aos="fade-up" data-aos-duration="2500"  value="Add/Remove Admin" name="action">
+                <input type="submit" class="btn btn-lg changebtn" data-aos="fade-up" data-aos-duration="2500"  value="Make Admin" name="action">
                 <br>
                 
                 <%
