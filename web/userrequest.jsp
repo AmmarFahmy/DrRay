@@ -1,8 +1,4 @@
-<%-- 
-    Document   : userrequest
-    Created on : Mar 28, 2019, 12:50:02 AM
-    Author     : ASUS
---%>
+
 
 <%@page import="java.sql.ResultSet"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -36,11 +32,12 @@
 
         <script src="js/Script.js"></script>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>User Request</title>
+        <link rel="icon" href="images/logo.png">
+        <title>DrRay</title>
     </head>
     <body>
         <div class="hedding" data-aos="fade-up" data-aos-duration="2500">
-            <h1>XYZ DRIVER'S ASSOCIATION</h1> <br>
+            <h1>DrRay Sri Lanka</h1> <br>
             <h1>User Request Handling Panel </h1> </div>
         <div class="allmembers-form">
             <table class="table table-dark" style="margin-top: 3em;"  data-aos="fade-up" data-aos-duration="2500">
