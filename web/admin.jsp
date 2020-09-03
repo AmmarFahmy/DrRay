@@ -1,8 +1,3 @@
-<%-- 
-    Document   : admin page
-    Created on : Mar 4, 2019, 8:15:02 PM
-    Author     : Randika
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -35,24 +30,24 @@
 
         <script src="js/Script.js"></script>
 
-        <title>Admin</title>
+        <link rel="icon" href="images/logo.png">
+        <title>DrRay</title>
 
     </head>
     <body>
         <%
             HttpSession se = request.getSession();
-            
-            
+
             if (se.getAttribute("userID") == null) {
                 response.sendRedirect("index.jsp?loginerror=failed");
             }
-            
+
 
         %>
-        
-        <div class="hedding" data-aos="fade-up" data-aos-duration="2500">
-            <h1>DrRay </h1> <br>
-            <h1>Admin Panel</h1> </div>
+
+        <div class="hedding" data-aos="fade-up" data-aos-duration="2500"><br> <br>
+            <h1>DrRay Sri Lanka</h1> <br>
+            <h1>Admin Dashboard</h1> </div>
 
         <div class="button" align="center">
             <form action="adminservlet" method="post">
@@ -60,21 +55,27 @@
                 <br>
                 <input type="submit" class="btn btn-lg changebtn" data-aos="fade-up" data-aos-duration="2500"  value="User Profile Requests" name="action">
                 <br>
-                
-                <% 
-                    
-                    String uStaus = (String) se.getAttribute("userStatus");
-                    
-                    if(uStaus == "MainAdmin"){ 
+                <input type="submit" class="btn btn-lg changebtn" data-aos="fade-up" data-aos-duration="2500"  value="Upload MRI or CT Scan Image" name="action">
+                <br>
+                <input type="submit" class="btn btn-lg changebtn" data-aos="fade-up" data-aos-duration="2500"  value="Upload Scanned Image to Detect Tumor" name="action">
+                <br>
+
+                <%                    String uStaus = (String) se.getAttribute("userStatus");
+
+                    if (uStaus == "MainAdmin") {
                 %>
-                
+
                 <input type="submit" class="btn btn-lg changebtn" data-aos="fade-up" data-aos-duration="2500"  value="Make Admin" name="action">
                 <br>
-                
+
                 <%
                     }
                 %>    
-
+                <br>
+                <br>
+                <br>
+                <br>
+                <input type="submit" class="btn btn-lg changebtn" data-aos="fade-up" data-aos-duration="2500"  value="Home" name="action">
             </form> 
         </div>
 
