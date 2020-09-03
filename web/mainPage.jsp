@@ -1,8 +1,4 @@
-<%-- 
-    Document   : login
-    Created on : Mar 4, 2019, 8:15:02 PM
-    Author     : ISK
---%>
+
 
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
@@ -47,7 +43,8 @@
 
 
 
-        <title>Finance manager</title>
+        <link rel="icon" href="images/logo.png">
+        <title>DrRay</title>
 
     </head>
     <body>
@@ -59,7 +56,7 @@
 
                         <div class="middle">
                             <div class="mTitle"  data-aos="fade-down" data-aos-duration="3500">
-                                <h2>Finance manager</h2>
+                                
                             </div>
                             <form class="form" method="action=">
                                 <div class="blur"></div>
@@ -77,14 +74,14 @@
 
 
                             <!--Report section-->
-                            <%                                   
-                                    try {
-                                        Connection connection = DBConnection.connectionClass.getConnection();
-                                        Statement statement = connection.createStatement();
-                                        String sql = "select SUM(premiumAmmount+paidAmmount) AS xyz from premiumdetails";
+                            <%
+                                try {
+                                    Connection connection = DBConnection.connectionClass.getConnection();
+                                    Statement statement = connection.createStatement();
+                                    String sql = "select SUM(premiumAmmount+paidAmmount) AS xyz from premiumdetails";
 //                                        String sql = "select * from premiumdetails";
-                                        ResultSet resultSet = statement.executeQuery(sql);
-                                %>
+                                    ResultSet resultSet = statement.executeQuery(sql);
+                            %>
                             <div class="container reportSection">
                                 <div class="blur"></div>
                                 <h2 class="mTitle">Report</h2>
@@ -95,12 +92,12 @@
                                 </div>
                             </div>
                             <%
-                                        
-                                        connection.close();
-                                    } catch (Exception e) {
-                                        e.printStackTrace();
-                                    }
-                                %>
+
+                                    connection.close();
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+                            %>
                             <!--Report section-->
                         </div>
                     </div>
