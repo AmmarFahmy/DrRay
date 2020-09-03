@@ -21,10 +21,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import passwordChange.EncodeDecodePW;
 
-/**
- *
- * @author ISK
- */
+
 @WebServlet(name = "register", urlPatterns = {"/register"})
 public class register extends HttpServlet {
 
