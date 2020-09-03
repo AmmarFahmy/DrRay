@@ -37,30 +37,32 @@ public class changedetails extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            String clickbtn=request.getParameter("reqbtn");
-            switch(clickbtn){
+            String clickbtn = request.getParameter("reqbtn");
+            switch (clickbtn) {
                 case "Change Details":
-                     String username=request.getParameter("username");
-            String userid=request.getParameter("userid");
-            String fname=request.getParameter("fname");
-            String lname=request.getParameter("lname");
-            String phone=request.getParameter("phone");
-            String email=request.getParameter("email");
-            System.out.println(username+userid+fname+lname+phone+email);
-            int i=models.usermodel.updatedetails(username, fname, lname, phone, email,userid);
-            if(i!=0){
-                response.sendRedirect("allmembers.jsp?change=success");
-            }else{
-                response.sendRedirect("allmembers.jsp?changew=fail");
+                    String username = request.getParameter("username");
+                    String userid = request.getParameter("userid");
+                    String fname = request.getParameter("fname");
+                    String lname = request.getParameter("lname");
+                    String phone = request.getParameter("phone");
+                    String email = request.getParameter("email");
+                    String u_NICNum = request.getParameter("u_NICNum");
+                    String u_SLMCNum = request.getParameter("u_SLMCNum");
+                    System.out.println(username + userid + fname + lname + phone + email + u_NICNum + u_SLMCNum);
+                    int i = models.usermodel.updatedetails(username, fname, lname, phone, email, u_NICNum, u_SLMCNum, userid);
+                    if (i != 0) {
+                        response.sendRedirect("allusers.jsp?change=success");
+                    } else {
+                        response.sendRedirect("allusers.jsp?changew=fail");
+                    }
+                    break;
+                case "Go to All Member panel":
+                    response.sendRedirect("admin.jsp");
+                    break;
             }
-            break;
-            case "Go to All Member panel":
-                 response.sendRedirect("admin.jsp");
-                 break;
-            }
-           
+
         } catch (SQLException ex) {
-            System.out.println("oops somthing happen"+ex);
+            System.out.println("OOPS something happend" + ex);
         }
     }
 
