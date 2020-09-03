@@ -1,8 +1,3 @@
-<%-- 
-    Document   : changedetails
-    Created on : Mar 20, 2019, 9:48:53 PM
-    Author     : Randika
---%>
 
 <%@page import="java.sql.ResultSet"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -36,7 +31,8 @@
 
         <script src="js/Script.js"></script>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Change Details</title>
+        <link rel="icon" href="images/logo.png">
+        <title>DrRay</title>
     </head>
     <body>
 
