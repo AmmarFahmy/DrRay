@@ -142,7 +142,7 @@
                                         <%
                                             String uStaus = (String) se.getAttribute("userStatus");
 
-                                            if (uStaus == "Admin" || uStaus == "ClaimAdmin") {
+                                            if (uStaus == "Admin" || uStaus == "User") {
                                         %>
                                         <a href="mainPage.jsp"><li>&nbsp;&nbsp;&nbsp;Claim Dashboard</li></a>
                                                 <%
