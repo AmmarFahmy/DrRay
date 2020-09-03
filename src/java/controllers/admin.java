@@ -36,20 +36,14 @@ public class admin extends HttpServlet {
         String action=request.getParameter("action");
         System.out.println(action);
         switch(action){
-            case "All Members":
-                response.sendRedirect("allmembers.jsp");
-                break;
-            case "Outstanding Balances":
-                response.sendRedirect("outstanding.jsp");
+            case "All Users":
+                response.sendRedirect("allusers.jsp");
                 break;
             case "User Profile Requests":
                 response.sendRedirect("userrequest.jsp");
-                break;    
-            case "Vehical Registration Request":
-                response.sendRedirect("v_reg_req.jsp");
-                break;
-            case "Add/Remove Admin":
-                response.sendRedirect("addAdmin.jsp");
+                break; 
+            case "Make Admin":
+                response.sendRedirect("makeAdmin.jsp");
                 break;    
         }
         
