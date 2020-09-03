@@ -36,7 +36,8 @@
 
         <link rel="icon" href="images/logo.png">
 
-        <title>Insurance</title>
+        <link rel="icon" href="images/logo.png">
+        <title>DrRay</title>
 
     </head>
     <body>
@@ -47,7 +48,7 @@
                     <div class="outer">
                         <div class="middle">
 
-                            <form class="" method="POST" action="login">
+                            <form class="" method="POST" action="searchAnalysisResult.jsp">
                                 <div class="blur"></div>
                                 <div class="card-body">
 
@@ -58,7 +59,7 @@
                                                 <i class=" fa fa-user-circle"></i>
                                             </span>
                                         </div>
-                                        <input type="text" name="uname" class="form-control" placeholder="Please Enter the Unique Code Here...">
+                                        <input type="text" name="patient" class="form-control" placeholder="Please Enter the Unique Code Here...">
                                     </div>
                                 </div>
 
@@ -66,7 +67,6 @@
                                 <div class="card-footer text-center" >
                                     <input type="submit" class="loginBtn" value="Search" data-aos="fade-up" data-aos-duration="2500">
                                 </div>
-
                             </form>
                             <center>
                                 <button class="backBtn" onclick="window.history.go(-1); return false;"><i class="fa fa-arrow-left"></i></button>
