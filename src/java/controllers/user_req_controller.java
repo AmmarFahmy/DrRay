@@ -19,10 +19,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import models.usermodel;
 
-/**
- *
- * @author ASUS
- */
+
 @WebServlet(name = "user_req_controller", urlPatterns = {"/user_req_controller"})
 public class user_req_controller extends HttpServlet {
 
@@ -39,7 +36,7 @@ public class user_req_controller extends HttpServlet {
     private String port;
     private String user;
     private String pass;
-
+    
     public void init() {
         // reads SMTP server setting from web.xml file
         ServletContext context = getServletContext();
@@ -48,35 +45,38 @@ public class user_req_controller extends HttpServlet {
         user = context.getInitParameter("user");
         pass = context.getInitParameter("pass");
     }
-
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws ServletException, IOException  {
         response.setContentType("text/html;charset=UTF-8");
-        try {
-            String clicbtn = request.getParameter("reqbtn");
-            switch (clicbtn) {
-                case "Accept Request":
-                    String usval = request.getParameter("request");
-                    String uname = request.getParameter("namerequest");
-                    String userEmail = request.getParameter("emailrequest");
-                    int i = usermodel.accept_request(usval);
-                    if (i != 0) {
-                        response.sendRedirect("userrequest.jsp?accreq=success");
-                        String subject = "XYZ DRIVER'S ASSOCIATION account successfull accepted by admin email !!";
-                        String message = "<h1><i>Hello " + uname + " your acoont is fuuly accepted by admin now you can add your vehicls to get inshured Thank you !!!</i></h1>";
-                        models.sendEmail.sendEmail(host, port, user, pass, userEmail, subject, message);
+        try{
+             String clicbtn = request.getParameter("reqbtn");
+             switch(clicbtn){
+                 case "Accept Request":
+                        String usval = request.getParameter("request");
+                        String uname = request.getParameter("namerequest");
+                        String userEmail = request.getParameter("emailrequest");
+                        int i=usermodel.accept_request(usval);
+                        if(i!=0){
+                                   response.sendRedirect("userrequest.jsp?accreq=success");
+                                   String subject = "DrRay Sri Lanka account successfull accepted by admin !!";
+                                   String message = "<h1><i>Hello "+uname+ " your acoont is fuuly accepted by admin now you can add access the site. Thank you !!!</i></h1>";
+                                   models.sendEmail.sendEmail(host, port, user, pass, userEmail, subject, message);
 
-                    } else {
-                        response.sendRedirect("userrequest.jsp?accreqw=fail");
-                    }
-                    break;
-                case "Go to Admin panel":
-                    response.sendRedirect("admin.jsp");
-            }
-
-        } catch (SQLException ex) {
-            System.out.println("somthing happen in user req controller" + ex);
-
+                                   
+                                }
+                       else{
+                          response.sendRedirect("userrequest.jsp?accreqw=fail");
+                       }   
+                  break;
+                  case"Go to Admin panel":
+                      response.sendRedirect("admin.jsp");
+             }
+        
+    }
+        catch(SQLException ex){
+            System.out.println("somthing happen in user req controller"+ex);
+            
         } catch (MessagingException ex) {
             Logger.getLogger(user_req_controller.class.getName()).log(Level.SEVERE, null, ex);
         }
