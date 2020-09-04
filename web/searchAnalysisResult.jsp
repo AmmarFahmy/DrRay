@@ -47,7 +47,7 @@
     <body>
         <div class="hedding" data-aos="fade-up" data-aos-duration="2500">
             <h1>DrRay Sri Lanka</h1> <br>
-            <h1>All Users Panel</h1> </div>
+        </div>
         <div class="allmembers-form">
             <table class="table table-dark" style="margin-top: 3em;"  data-aos="fade-up" data-aos-duration="2500">
                 <thead>
@@ -78,6 +78,10 @@
                         String patient = request.getParameter("patient");
                         String sqlString = "select * from `searchanalysis` where `Patient`='" + patient + "' || `Sex`='" + patient + "' || `Tumour_Type`='" + patient + "'";
                         ResultSet rs = stmt.executeQuery(sqlString);
+                        
+//                        String sqlString2 = "SELECT COUNT(*) FROM `searchanalysis` WHERE `Patient`='" + patient + "' || `Sex`='" + patient + "' || `Tumour_Type`='" + patient + "'";
+//                        ResultSet rs2 = stmt.executeQuery(sqlString2);
+//                        System.out.println(rs2);
 
                         while (rs.next()) {
 
