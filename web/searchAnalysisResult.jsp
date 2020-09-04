@@ -1,6 +1,3 @@
-
-
-
 <%@page import="java.io.OutputStream"%>
 <%@page import="java.sql.Blob"%>
 <%@page import="java.sql.Statement"%>
