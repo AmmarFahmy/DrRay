@@ -354,12 +354,12 @@
                     </div>
 
                     <div class="col-sm"  data-aos="fade-up" data-aos-duration="2000" data-aos-delay="500">
-                        <form class="contact_from">
+                        <form class="contact_from" action="contactForm">
                             <input type="text" name="fullName" placeholder="Full Name">
                             <br>
                             <input type="email" name="email" placeholder="Email">
                             <br>
-                            <textarea class="Umessage" placeholder="Message"></textarea>
+                            <textarea class="Umessage" placeholder="Message" name="message"></textarea>
 
                             <br>
                             <button type="submit" name="submit">Send</button>
