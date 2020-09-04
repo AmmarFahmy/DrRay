@@ -41,29 +41,23 @@
 
     </head>
     <body>
+        <div class="hedding" data-aos="fade-up" data-aos-duration="2500">
+            <h1>DrRay Sri Lanka</h1> <br>
+        </div>
 
         <div class="login_form clear-filter" filter-color="blue">
             <div class="content">
                 <div class="col-md-4 ml-auto mr-auto">
-                    <div class="outer">
-                        <div class="middle">
-
+                    <div class="outer"> <br><br><br><br>
+                        
                             <form class="" method="POST" action="searchAnalysisResult.jsp">
                                 <div class="blur"></div>
                                 <div class="card-body">
 
-                                    <div class="input-group no-border input-lg" 
-                                         data-aos="zoom-in" data-aos-duration="2500">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text">
-                                                <i class=" fa fa-user-circle"></i>
-                                            </span>
-                                        </div>
+                                    <div class="input-group no-border input-lg" data-aos="zoom-in" data-aos-duration="2500">
                                         <input type="text" name="patient" class="form-control" placeholder="Please Enter the Unique Code Here...">
                                     </div>
                                 </div>
-
-
                                 <div class="card-footer text-center" >
                                     <input type="submit" class="loginBtn" value="Search" data-aos="fade-up" data-aos-duration="2500">
                                 </div>
@@ -71,12 +65,32 @@
                             <center>
                                 <button class="backBtn" onclick="window.history.go(-1); return false;"><i class="fa fa-arrow-left"></i></button>
                             </center>
+                      
+                        <div class="allmembers-form">
+                            <table class="table table-dark" style="margin-top: 3em;"  data-aos="fade-up" data-aos-duration="2500">
+                                <tr>
+                                    <th>Some Common Types of Brain Tumors are Listed Here to Purpose of Easy Searching</th>
+                                </tr>
+                                <tr>
+                                    <td>Benign endocrine</td>
+                                </tr>
+                                <tr>
+                                    <td>Malignant brain</td>
+                                </tr>
+                                <tr>
+                                    <td>Non-benign endocrine</td>
+                                </tr>
+                                <tr>
+                                    <td>Non-malignant brain</td>
+                                </tr>
+                            </table>
                         </div>
                     </div>
 
                 </div>
             </div>
         </div>
+        
 
         <script>
             AOS.init();
