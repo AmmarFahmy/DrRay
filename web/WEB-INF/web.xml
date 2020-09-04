@@ -28,9 +28,17 @@
         <servlet-name>uploadImage</servlet-name>
         <servlet-class>controllers.uploadImage</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>contactForm</servlet-name>
+        <servlet-class>controllers.contactForm</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>uploadImage</servlet-name>
         <url-pattern>/uploadImage</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>contactForm</servlet-name>
+        <url-pattern>/contactForm</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
