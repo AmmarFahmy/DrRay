@@ -2,7 +2,7 @@
 <!--importing libraries -->
 <%@page import="java.util.List"%>
 <%@page import="java.util.ArrayList"%>
-<%@page import="models.vehicleRegistration"%>
+
 
 <!--making session-->
 <%
@@ -167,8 +167,6 @@
                 <!--full paid-->  
                 <td><button  disabled>Paid</button></td>
                 <%}%>
-                <!--meka check krnna ai mn iye ohma kla wada kle na ne-->
-                <!--ok. thawa thiyenawada? dn balanna hri ne podk db 1 total eka blnna eke toatal eka natiwelane -->
             </tr>
             <%
                 }
