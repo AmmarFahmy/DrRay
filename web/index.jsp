@@ -393,6 +393,7 @@
         <footer class="page-footer font-small  footer">
             <div class="footer-copyright text-center py-3">© 2020 Copyrights:
                 <a href="index.jsp"> DrRay Sri Lanka</a>
+                <a href="index1.jsp"> Just click to check</a>
             </div>
         </footer>
 
