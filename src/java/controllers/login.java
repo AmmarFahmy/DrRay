@@ -50,8 +50,9 @@ public class login extends HttpServlet {
 
             if (rs.first()) {
                 String dbPW = rs.getString("u_PW");
-                if (BCrypt.checkpw(UPW, dbPW)) {
-
+                //if (BCrypt.checkpw(UPW, dbPW)) {
+                if (UPW.equals(dbPW)) {
+                    
                     HttpSession session = request.getSession();
                     userID = rs.getInt("userID");
                     fName = rs.getString("u_firstName");
