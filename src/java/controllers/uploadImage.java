@@ -32,9 +32,6 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/uploadImages")
 @MultipartConfig(maxFileSize = 16177216) //upto 16 MB
 
-//@MultipartConfig(fileSizeThreshold = 1024 * 1024 * 2, // 2MB
-//        maxFileSize = 1024 * 1024 * 10, // 10MB
-//        maxRequestSize = 1024 * 1024 * 50)
 
 public class uploadImage extends HttpServlet {
     
