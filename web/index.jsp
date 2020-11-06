@@ -87,8 +87,6 @@
                 </div>
             </div>
         </div>
-
-
         <!-- Navigation Bar -->
 
         <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top" id="mainNav">
