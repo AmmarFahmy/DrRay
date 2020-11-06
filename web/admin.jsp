@@ -4,8 +4,6 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
@@ -42,7 +40,6 @@
                 response.sendRedirect("index.jsp?loginerror=failed");
             }
 
-
         %>
 
         <div class="hedding" data-aos="fade-up" data-aos-duration="2500"><br> <br>
@@ -78,11 +75,6 @@
                 <input type="submit" class="btn btn-lg changebtn" data-aos="fade-up" data-aos-duration="2500"  value="Home" name="action">
             </form> 
         </div>
-
-
-
-
-
 
         <script>
             AOS.init();

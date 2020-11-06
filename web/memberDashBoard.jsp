@@ -73,8 +73,6 @@
     <h2>Users dashboard</h2> </div>
 
 
-
-
 <div class="button" align="center">
     <button onclick="window.location.href = 'uploadMRI.jsp'"class="btn btn-primary  btn-lg  " data-aos="fade-up" data-aos-duration="2500">Upload MRI or CT Scan Image</button>
     <br>
@@ -85,11 +83,6 @@
     <br>
     <button onclick="window.location.href = 'index.jsp'" data-aos="fade-up" data-aos-duration="2500" type="button" class="btn btn-primary  btn-lg  " >Home </button>
 </div>
-
-
-
-
-
 
 <script>
     AOS.init();
