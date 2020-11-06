@@ -7,6 +7,7 @@ package controllers;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.nio.charset.StandardCharsets;
 import java.security.SecureRandom;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -83,20 +84,20 @@ public class register extends HttpServlet {
                 
                 
                 /*Send email verification email*/
-                //String subject = "Insurance E-mail verification!!";
-                
-                //EncodeDecodePW pw= new EncodeDecodePW();
-                //String token = pw.encrypt(tmpPw);
-                        
-                //String link = "http://localhost:8080/XYZ/thorughEmail/newPw.jsp?un="+ userName +"&token="+token;
-                
-                //String message = "<h1><i>Hello "+userFname+ " " + userLname +" !!!</i></h1>";
-               // message += "<h3><b>click here to verify your email</b></h3>";
-               // message += "<a style='color:white;font-weight:bold;background-color:#e0c21a;font-size:2em;padding:0.2em 3em 0.2em 3em;text-align:center;cursor: pointer;border-radius:10px;text-decoration: none;' href='"+ link +"'>Verify</a>";
-                
-
-               // models.sendEmail.sendEmail(host, port, user, pass, userEmail, subject, message);
-                con.close();
+//                String subject = "Insurance E-mail verification!!";
+//                
+//                EncodeDecodePW pw= new EncodeDecodePW();
+//                String token = pw.encrypt(tmpPw);
+//                        
+//                String link = "http://localhost:8080/XYZ/thorughEmail/newPw.jsp?un="+ userName +"&token="+token;
+//                
+//                String message = "<h1><i>Hello "+userFname+ " " + userLname +" !!!</i></h1>";
+//                message += "<h3><b>click here to verify your email</b></h3>";
+//                message += "<a style='color:white;font-weight:bold;background-color:#e0c21a;font-size:2em;padding:0.2em 3em 0.2em 3em;text-align:center;cursor: pointer;border-radius:10px;text-decoration: none;' href='"+ link +"'>Verify</a>";
+//                
+//
+//                models.sendEmail.sendEmail(host, port, user, pass, userEmail, subject, message);
+//                con.close();
                 response.sendRedirect("login.jsp?registration=success");
                 
             }
@@ -122,12 +123,25 @@ public class register extends HttpServlet {
     }
     
     private String randomTempPW(){
+        //creating random strings
         SecureRandom random = new SecureRandom();
-        byte bytes[] = new byte[60];
+        byte bytes[] = new byte[2];
         random.nextBytes(bytes);
-        Encoder encoder = Base64.getUrlEncoder().withoutPadding();
-        String token = encoder.encodeToString(bytes);
+        
+        String token = convertBytesToHex(bytes);
+        
+        //endcoding the random string 
+//        Encoder encoder = Base64.getUrlEncoder().withoutPadding();
+//        String token = encoder.encodeToString(bytes);
         return token;
+    }
+    
+    private static String convertBytesToHex(byte[] bytes) {
+        StringBuilder result = new StringBuilder();
+        for (byte temp : bytes) {
+            result.append(String.format("%02x", temp));
+        }
+        return result.toString();
     }
     
 
