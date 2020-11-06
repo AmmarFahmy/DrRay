@@ -78,26 +78,16 @@
                         String patient = request.getParameter("patient");
                         String sqlString = "select * from `searchanalysis` where `Patient`='" + patient + "' || `Sex`='" + patient + "' || `Tumour_Type`='" + patient + "'";
                         ResultSet rs = stmt.executeQuery(sqlString);
-                        
+
 //                        String sqlString2 = "SELECT COUNT(*) FROM `searchanalysis` WHERE `Patient`='" + patient + "' || `Sex`='" + patient + "' || `Tumour_Type`='" + patient + "'";
 //                        ResultSet rs2 = stmt.executeQuery(sqlString2);
 //                        System.out.println(rs2);
-
                         while (rs.next()) {
 
                 %>
                 <tr>
                     <td><%=rs.getString("Patient")%></td>
-                    <td><%=rs.getBlob("image")
-                          
-//                        Blob blob = rs.getBlob("image");
-//                        byte byteArray[] = blob.getBytes(1, (int) blob.length());
-//                        response.setContentType("image/gif");
-//                        OutputStream os = response.getOutputStream();
-//                        os.write(byteArray);
-//                        os.flush();
-//                        os.close();
-                    %></td>
+                    <td><img src="getImage.jsp?patient=<%=patient%>" width="70px" height="100"/></td>
                     <td><%=rs.getString("Cancer_Site")%></td>
                     <td><%=rs.getString("Tumour_Type")%> </td> 
                     <td><%=rs.getString("Sex")%> </td> 
