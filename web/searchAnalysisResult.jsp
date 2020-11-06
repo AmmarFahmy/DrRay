@@ -88,7 +88,8 @@
                 %>
                 <tr>
                     <td><%=rs.getString("Patient")%></td>
-                    <td><%
+                    <td><%=rs.getBlob("image")
+                          
 //                        Blob blob = rs.getBlob("image");
 //                        byte byteArray[] = blob.getBytes(1, (int) blob.length());
 //                        response.setContentType("image/gif");
@@ -96,7 +97,7 @@
 //                        os.write(byteArray);
 //                        os.flush();
 //                        os.close();
-%></td>
+                    %></td>
                     <td><%=rs.getString("Cancer_Site")%></td>
                     <td><%=rs.getString("Tumour_Type")%> </td> 
                     <td><%=rs.getString("Sex")%> </td> 
