@@ -72,6 +72,42 @@
                                     <div class="input-group no-border input-lg" data-aos="zoom-in" data-aos-duration="2500">
                                         <input type="text" class="form-control" name="Sex" placeholder="Gender" required=""/>
                                     </div>
+                                    
+                                    <div class="input-group no-border input-lg" data-aos="zoom-in" data-aos-duration="2500">
+                                        <input type="text" class="form-control" name="Mean" placeholder="Mean" required=""/>
+                                    </div>
+                                    
+                                    <div class="input-group no-border input-lg" data-aos="zoom-in" data-aos-duration="2500">
+                                        <input type="text" class="form-control" name="Variance" placeholder="Variance" required=""/>
+                                    </div>
+                                    
+                                    <div class="input-group no-border input-lg" data-aos="zoom-in" data-aos-duration="2500">
+                                        <input type="text" class="form-control" name="Standard_Deviation" placeholder="Standard_Deviation" required=""/>
+                                    </div>
+                                    
+                                    <div class="input-group no-border input-lg" data-aos="zoom-in" data-aos-duration="2500">
+                                        <input type="text" class="form-control" name="Entropy" placeholder="Entropy" required=""/>
+                                    </div>
+                                    
+                                    <div class="input-group no-border input-lg" data-aos="zoom-in" data-aos-duration="2500">
+                                        <input type="text" class="form-control" name="Skewness" placeholder="Skewness" required=""/>
+                                    </div>
+                                    
+                                    <div class="input-group no-border input-lg" data-aos="zoom-in" data-aos-duration="2500">
+                                        <input type="text" class="form-control" name="Contrast" placeholder="Contrast" required=""/>
+                                    </div>
+                                    
+                                    <div class="input-group no-border input-lg" data-aos="zoom-in" data-aos-duration="2500">
+                                        <input type="text" class="form-control" name="Homogeneity" placeholder="Homogeneity" required=""/>
+                                    </div>
+                                    
+                                    <div class="input-group no-border input-lg" data-aos="zoom-in" data-aos-duration="2500">
+                                        <input type="text" class="form-control" name="Dissimilarity" placeholder="Dissimilarity" required=""/>
+                                    </div>
+                                    
+                                    <div class="input-group no-border input-lg" data-aos="zoom-in" data-aos-duration="2500">
+                                        <input type="text" class="form-control" name="Correlation" placeholder="Correlation" required=""/>
+                                    </div>
 
                                     <div data-aos="zoom-in" data-aos-duration="2500">
                                         <input type="file" class="form-control" name="file" accept="image/*" required=""/>
