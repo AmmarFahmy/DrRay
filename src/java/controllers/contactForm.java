@@ -38,24 +38,24 @@ public class contactForm extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, SQLException {
         response.setContentType("text/html;charset=UTF-8");
-        
+
         try (PrintWriter out = response.getWriter()) {
-        
-        PrintWriter outs;
-        String connectionURL = "jdbc:mysql://localhost:3306/drray?useTimezone=true&serverTimezone=UTC";
-        String user = "root";
-        String pass = "";
-        outs = response.getWriter();
-        int result = 0;
-        Connection con = null;
-        
-        String fullName = request.getParameter("fullName");
-        String email = request.getParameter("email");
-        String message = request.getParameter("message");
-        
-        try {
+
+            PrintWriter outs;
+            String connectionURL = "jdbc:mysql://localhost:3306/drray?useTimezone=true&serverTimezone=UTC";
+            String user = "root";
+            String pass = "";
+            outs = response.getWriter();
+            int result = 0;
+            Connection con = null;
+
+            String fullName = request.getParameter("fullName");
+            String email = request.getParameter("email");
+            String message = request.getParameter("message");
+
+            try {
                 Class.forName("com.mysql.cj.jdbc.Driver");
-                con = DriverManager.getConnection(connectionURL,user,pass);
+                con = DriverManager.getConnection(connectionURL, user, pass);
                 PreparedStatement ps = con.prepareStatement("insert into contactform (fullName, email, message) values (?,?,?)");
                 ps.setString(1, fullName);
                 ps.setString(2, email);
@@ -66,12 +66,12 @@ public class contactForm extends HttpServlet {
                 } else {
                     response.sendRedirect("index.jsp?confirm=fail");
                 }
-                
+
             } catch (Exception e) {
-                out.println("<h3>an error</h3> "+e);
+                out.println("<h3>an error</h3> " + e);
             }
         }
-      
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
