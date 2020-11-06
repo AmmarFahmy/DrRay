@@ -52,18 +52,36 @@ public class uploadImage extends HttpServlet {
         String Cancer_Site = request.getParameter("Cancer_Site");
         String Tumour_Type = request.getParameter("Tumour_Type");
         String Sex = request.getParameter("Sex");
+        String Mean = request.getParameter("Mean");
+        String Variance = request.getParameter("Variance");
+        String Standard_Deviation = request.getParameter("Standard_Deviation");
+        String Entropy = request.getParameter("Entropy");
+        String Skewness = request.getParameter("Skewness");
+        String Contrast = request.getParameter("Contrast");
+        String Homogeneity = request.getParameter("Homogeneity");
+        String Dissimilarity = request.getParameter("Dissimilarity");
+        String Correlation = request.getParameter("Correlation");
         javax.servlet.http.Part part = request.getPart("file");
         if (part != null) {
             try {
                 Class.forName("com.mysql.cj.jdbc.Driver");
                 con = DriverManager.getConnection(connectionURL,user,pass);
-                PreparedStatement ps = con.prepareStatement("insert into searchanalysis (patient, Cancer_Site, Tumour_Type, Sex, image) values (?,?,?,?,?)");
+                PreparedStatement ps = con.prepareStatement("insert into searchanalysis (patient, Cancer_Site, Tumour_Type, Sex, Mean, Variance, Standard_Deviation, Entropy, Skewness, Contrast, Homogeneity, Dissimilarity, Correlation, image) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
                 InputStream is = part.getInputStream();
                 ps.setString(1, patient);
                 ps.setString(2, Cancer_Site);
                 ps.setString(3, Tumour_Type);
                 ps.setString(4, Sex);
-                ps.setBlob(5, is);
+                ps.setString(5, Mean);
+                ps.setString(6, Variance);
+                ps.setString(7, Standard_Deviation);
+                ps.setString(8, Entropy);
+                ps.setString(9, Skewness);
+                ps.setString(10, Contrast);
+                ps.setString(11, Homogeneity);
+                ps.setString(12, Dissimilarity);
+                ps.setString(13, Correlation);
+                ps.setBlob(14, is);
                 
                 result = ps.executeUpdate();
                 if (result > 0) {
