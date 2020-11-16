@@ -44,7 +44,8 @@
 
         <div class="hedding" data-aos="fade-up" data-aos-duration="2500"><br> <br>
             <h1>DrRay Sri Lanka</h1> <br>
-            <h1>Admin Dashboard</h1> </div>
+            <h1>Admin Dashboard</h1> 
+        </div>
 
         <div class="button" align="center">
             <form action="adminservlet" method="post">
