@@ -45,7 +45,7 @@ public class admin extends HttpServlet {
                 response.sendRedirect("uploadMRI.jsp");
                 break;
             case "Upload Scanned Image to Detect Tumor":
-                response.sendRedirect("#");
+                response.sendRedirect("http://127.0.0.1:5000/");
                 break;
             case "Home":
                 response.sendRedirect("index.jsp");
