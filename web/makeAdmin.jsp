@@ -41,7 +41,7 @@
     <body>
         <div class="hedding" data-aos="fade-up" data-aos-duration="2500">
             <h1>DrRay Sri Lanka</h1> <br>
-            <h1>All Users Panel</h1> </div>
+            <h1>Make Admin Panel</h1> </div>
         <div class="allmembers-form">
             <table class="table table-dark" style="margin-top: 3em;"  data-aos="fade-up" data-aos-duration="2500">
                 <thead>
